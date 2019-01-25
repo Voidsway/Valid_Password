@@ -1,0 +1,23 @@
+print("Minimum length 5. Max length 10 &"
+      "\nShould contain at least one number &"
+      "\nShould contain at least one special character."
+      "\nIt should also contain no spaces")
+
+number_array = [
+                "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+                "!", "@", "#", "$", "%", "^", "&", "*", "?","+", "-", "~", "`", "="
+]
+password = input("\nCheck to see if its a valid password: ").lower()
+isValid = False
+
+if 5 < len(password) < 10:    
+    for letter in password:
+        if letter in number_array and len(password.split()) == 1:
+            isValid = True
+        else:
+            isValid = False
+
+if isValid:
+    print("Good password")
+else:
+    print("not a good password")
